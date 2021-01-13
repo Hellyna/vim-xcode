@@ -8,4 +8,4 @@ uuid=$(xcrun simctl list devices | grep "$SIMULATOR" | head -n1 | grep -E "[0-9A
 xcrun instruments -w "$uuid" 2>/dev/null
 
 xcrun simctl install booted "$app_path"
-xcrun simctl launch booted "$app_id"
+xcrun simctl launch --console booted "$app_id"
